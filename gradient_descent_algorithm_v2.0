@@ -2,19 +2,17 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 135,
-   "id": "7cddb8bf",
+   "execution_count": 122,
+   "id": "996b84d0",
    "metadata": {},
    "outputs": [
     {
-     "data": {
-      "text/plain": [
-       "'\\nModule   :   Gradient Descent Algorithm\\nVersion  :   2.0\\nAuthor   :   Htun Aung Kyaw\\nDate     :   Thu Mar 30 12:46:39 PM +0630 2023\\n\\nThis module implements the gradient descent algorithm for optimization problems.\\n\\nFunctions:\\n- gradient_descent(f(x), df(x), starting_point, step_size, number of iteration, stopping criteria (Eg. eps=1e-6(10 to the power minus 6)): implements the gradient descent algorithm\\n\\nThe paramter of gradient descent algorithm are \\n- f(x)\\n- df(x)/dx or gradient or derivative of f(x)\\n- starting_point (old_x)\\n- step_size or learning rate\\n- stopping criteria (epsilon)\\n- number of iteration \\n'"
-      ]
-     },
-     "execution_count": 135,
-     "metadata": {},
-     "output_type": "execute_result"
+     "ename": "SyntaxError",
+     "evalue": "incomplete input (1237683477.py, line 2)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  Cell \u001b[0;32mIn [122], line 2\u001b[0;36m\u001b[0m\n\u001b[0;31m    \"\"\"\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m incomplete input\n"
+     ]
     }
    ],
    "source": [
@@ -28,7 +26,7 @@
     "This module implements the gradient descent algorithm for optimization problems.\n",
     "\n",
     "Functions:\n",
-    "- gradient_descent(f(x), df(x), starting_point, step_size, number of iteration, stopping criteria (Eg. eps=1e-6(10 to the power minus 6)): implements the gradient descent algorithm\n",
+    "- gradient_descent(f, df, x_init, learning_rate=0.01, max_iter=1000, eps=1e-6): implements the gradient descent algorithm\n",
     "\n",
     "The paramter of gradient descent algorithm are \n",
     "- f(x)\n",
@@ -50,7 +48,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 136,
+   "execution_count": 112,
    "id": "3c9bf891",
    "metadata": {},
    "outputs": [],
@@ -61,7 +59,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "bb789fca",
+   "id": "86076943",
+   "metadata": {},
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "id": "aecb8068",
    "metadata": {},
    "source": [
     "## Pseudo code from ChatGpt\n",
@@ -92,7 +96,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "4f72d6fe",
+   "id": "a7dddf42",
    "metadata": {},
    "source": [
     "# ------------------------Start of Gradient Decent Algorithm----------------------"
@@ -108,12 +112,12 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 137,
+   "execution_count": 119,
    "id": "d742738c",
    "metadata": {},
    "outputs": [],
    "source": [
-    "# Setting parameter and function\n",
+    "\n",
     "function = lambda x: x**2\n",
     "derivative = lambda x : 2*x\n",
     "start_point = 4\n",
@@ -132,7 +136,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 138,
+   "execution_count": 114,
    "id": "0cf4c614",
    "metadata": {},
    "outputs": [],
@@ -153,7 +157,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 139,
+   "execution_count": 115,
    "id": "d5524ea9",
    "metadata": {},
    "outputs": [],
@@ -166,7 +170,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2ae36eeb",
+   "id": "af9ebf35",
    "metadata": {},
    "source": [
     "## Theory Background\n",
@@ -184,7 +188,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 140,
+   "execution_count": 116,
    "id": "6fc8e90b",
    "metadata": {},
    "outputs": [
@@ -235,6 +239,11 @@
     "    \n",
     "    return x, y\n",
     "\n",
+    "# # Set the parameters\n",
+    "# start_point = 4\n",
+    "# step_size = 0.1\n",
+    "# eps = 0\n",
+    "# max_iter = 10\n",
     "\n",
     "# Call the gradient descent function with specified parameters\n",
     "x, y = gradient_descent(f, df, start_point , step_size, eps, max_iter)\n",
@@ -255,7 +264,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 141,
+   "execution_count": 117,
    "id": "9cdce693",
    "metadata": {},
    "outputs": [
